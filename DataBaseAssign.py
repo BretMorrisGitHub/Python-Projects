@@ -22,15 +22,13 @@ with conn:
     length = len(fileList)
     i = 0
     item = fileList[i]
-    while i < length:
-        if item.endswith('.txt'):
-            cur.execute("INSERT INTO tbl_files(ID, col_file) VALUES (?,?)", (i , item))
+    for file in fileList:
+        if file.endswith('.txt'):
+            cur.execute("INSERT INTO tbl_files(col_file) VALUES (?)", (file,))
             conn.commit()
             i = i + 1
-            print(item)
-        else:
-            i = i + 1
-        #This print was for problem solving purposes
-            print(i)
+            print(file)
+        
+            
 conn.close()
 
