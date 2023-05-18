@@ -5,6 +5,7 @@ class house(ABC):
         print("Your mortgage amount is: ",amount)
 #This function is telling us to pass in an argument, but we won't tell you
 #how or what kind of data it will be.
+    @abstractmethod
     def payment(self, amount):
         pass
 
