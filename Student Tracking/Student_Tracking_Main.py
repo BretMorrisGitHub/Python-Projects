@@ -1,6 +1,6 @@
 # Python Version: 3.11.3
 #
-# Autho: Bret Morris
+# Author: Bret Morris
 
 from tkinter import *
 import tkinter as tk
